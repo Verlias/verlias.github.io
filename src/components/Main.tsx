@@ -17,7 +17,7 @@ function Main() {
             <a href="https://github.com/Verlias" target="_blank" rel="noreferrer"><GitHubIcon/></a>
             <a href="https://www.linkedin.com/in/loganvoravong/" target="_blank" rel="noreferrer"><LinkedInIcon/></a>
           </div>
-          <h1>Logan Voravong test </h1>
+          <h1>Logan Voravong</h1>
           <p>Software Engineer</p>
 
           <div className="mobile_social_icons">
