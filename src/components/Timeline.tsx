@@ -14,21 +14,6 @@ function Timeline() {
         <VerticalTimeline>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            contentStyle={{ background: 'white', color: 'rgb(39, 40, 34)' }}
-            contentArrowStyle={{ borderRight: '7px solid  white' }}
-            date="July 2024 - present"
-            iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
-            icon={<FontAwesomeIcon icon={faBriefcase} />}
-          >
-            <h2 className="vertical-timeline-element-title">InvestIQ</h2>
-            <h3 className="vertical-timeline-element-title">Product Manager</h3>
-            <h4 className="vertical-timeline-element-subtitle">Pittsburgh, PA</h4>
-              <p>• Managed a team of 5 software engineers, delegating tasks and ensuring timely delivery of high-quality software within Agile and Scrum frameworks, achieving a 25% reduction in project timelines.</p>
-              <p>• Facilitated sprint planning, daily stand-ups, and retrospective meetings, driving a 20% increase in team productivity and fostering a culture of continuous improvement.</p>
-              <p>• Collaborated with cross-functional teams, including product management, design, and QA, to streamline development processes and enhance project delivery speed by 15%, aligning with business objectives.</p>
-          </VerticalTimelineElement>
-          <VerticalTimelineElement
-            className="vertical-timeline-element--work"
             date="May 2024 - Present"
             iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
@@ -47,10 +32,11 @@ function Timeline() {
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
             <h2 className="vertical-timeline-element-title">InvestIQ</h2>
-            <h3 className="vertical-timeline-element-title">Software Engineer</h3>
+            <h3 className="vertical-timeline-element-title">Founding Engineer</h3>
             <h4 className="vertical-timeline-element-subtitle">Pittsburgh, PA</h4>
             <p>• Engineered and implemented advanced machine learning models and statistical algorithms tailored for trading and risk management, utilizing PyTorch achieving a significant 15% increase in portfolio returns</p>
             <p>• Collaborated with business analysts to engineer trading algorithms, integrating technical indicators like RSI, MACD, and Bollinger Bands, achieving a 10% increase in trading strategy effectiveness</p>
+            <p>• Optimized data pipeline processes, reducing data processing time by 25% and ensuring real-time data availability for trading algorithms.</p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
