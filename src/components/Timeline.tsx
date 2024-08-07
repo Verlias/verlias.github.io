@@ -47,7 +47,7 @@ function Timeline() {
             <h2 className="vertical-timeline-element-title">University of Pennsylania, Stevens Center for Innovation in Finance</h2>
             <h3 className="vertical-timeline-element-title">Software Engineer Intern</h3>
             <h4 className="vertical-timeline-element-subtitle">Philadelphia, PA</h4>
-            <p>• Spearheaded cross-functional collaboration within an Agile framework to conceptualize and develop an college financial analysis tool, leveraging Java, PostgreSQL, and SpringBoot on AWS EC2 instances</p>
+            <p>• Spearheaded cross-functional collaboration within an Agile framework to conceptualize and develop a college financial analysis tool, leveraging Java, PostgreSQL, and Spring Boot on AWS EC2 instances</p>
             <p>• Developed the Student Aid Index (SAI) algorithm, enhancing financial assessment accuracy by 92.99%, utilizing AWS Lambda for serverless computing and AWS S3 for secure storage of algorithmic data inputs</p>
             <p>• Enhance client-side data retrieval by optimizing SQL query performance and implementing efficient caching strategies using PostgreSQL, resulting in a 25% reduction in data access latency and improved user experience.</p>
           </VerticalTimelineElement>
