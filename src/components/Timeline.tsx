@@ -27,16 +27,16 @@ function Timeline() {
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            date="April 2024 - Present"
+            date="April 2024 - September 2024"
             iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
             <h2 className="vertical-timeline-element-title">InvestIQ LLC</h2>
-            <h3 className="vertical-timeline-element-title">Founding Engineer</h3>
+            <h3 className="vertical-timeline-element-title">Software Engineer</h3>
             <h4 className="vertical-timeline-element-subtitle">Pittsburgh, PA</h4>
-            <p>• Engineering and developing advanced machine learning models and statistical algorithms tailored for trading and risk management utilizing PyTorch, aimed to achieve a significant 15% increase in portfolio returns.</p>
-            <p>• Collaborating with business analysts to engineer trading algorithms, integrating stock market technical indicators like RSI, MACD, and Bollinger Bands, expected to achieve a 10% increase in trading strategy effectiveness.</p>
-            <p>• Optimizing data pipeline processes, aimed to cut latency by 25% and ensuring near-instantaneous data availability for trading algorithms, significantly enhancing overall real-time data ingestion for high-frequency trading</p>
+            <p>• Developed a neural network in PyTorch for analyzing tech stocks, using CNNs to identify price patterns and LSTMs to capture sequential trends, resulting in over 85% accuracy in stock price predictions.</p>
+            <p>• Collaborated with business analysts to integrate stock market technical indicators like RSI, MACD, and Bollinger Bands into the neural network, enhancing the model's input features and increasing prediction accuracy by 10%.</p>
+            <p>• Applied advanced data cleaning and preprocessing techniques using Python and Pandas to manage and refine over 500,000 data records from diverse sources, enhancing data quality and model training efficiency by 30%.</p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
@@ -47,8 +47,8 @@ function Timeline() {
             <h2 className="vertical-timeline-element-title">University of Pennsylania, Stevens Center for Innovation in Finance</h2>
             <h3 className="vertical-timeline-element-title">Software Engineer Intern</h3>
             <h4 className="vertical-timeline-element-subtitle">Philadelphia, PA</h4>
-            <p>• Spearheaded cross-functional collaboration within an Agile framework to conceptualize and develop a college financial analysis tool, leveraging Java, PostgreSQL, and Spring Boot on AWS EC2 instances</p>
-            <p>• Developed the Student Aid Index (SAI) algorithm, enhancing financial assessment accuracy by 92.99%, utilizing AWS Lambda for serverless computing and AWS S3 for secure storage of algorithmic data inputs</p>
+            <p>• Spearheaded cross-functional collaboration within an Agile framework to conceptualize and develop a college financial analysis tool, leveraging Java, PostgreSQL, and Spring Boot on AWS EC2 instances.</p>
+            <p>• Developed the Student Aid Index (SAI) algorithm, enhancing financial assessment accuracy by 92.99%, utilizing AWS Lambda for serverless computing and AWS S3 for secure storage of algorithmic data inputs.</p>
             <p>• Enhance client-side data retrieval by optimizing SQL query performance and implementing efficient caching strategies using PostgreSQL, resulting in a 25% reduction in data access latency and improved user experience.</p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
