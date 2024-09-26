@@ -13,7 +13,7 @@ function Project() {
         <div className="projects-grid">
             <div className="project">
                 <a href="https://github.com/Verlias/PennApps2025-Prospera" target="_blank" rel="noreferrer"><img src={Prospera} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://github.com/Verlias/PennApps2025-Prospera" target="_blank" rel="noreferrer"><h2>PennApps: Prospera</h2></a>
+                <a href="https://github.com/Verlias/PennApps2025-Prospera" target="_blank" rel="noreferrer"><h2>PennApps 2025: Prospera</h2></a>
                 <p><b>Achieved Top 10 in Best Design</b> at the <b>University of Pennsylvania Hackathon: PennApps</b></p>
                 <p>Prospera is an AI-powered budgeting app that helps users manage their finances by analyzing spending patterns and providing personalized recommendations. It integrates real-time financial data and features a secure chatbot for quick financial insights.</p>            </div>
             <div className="project">
