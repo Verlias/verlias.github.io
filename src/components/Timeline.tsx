@@ -21,7 +21,7 @@ function Timeline() {
             <h2 className="vertical-timeline-element-title">Zhou Robotics Lab</h2>
             <h3 className="vertical-timeline-element-title">Machine Learning Researcher</h3>
             <h4 className="vertical-timeline-element-subtitle">Philadelphia, PA</h4>
-            <p>• Contributing to the development of a Learnable Perception-Action-Communication (LPAC) architecture for a multi-robotic coverage control systems, with a focus on the integration of Spatio-Temporal features.</p>
+            <p>• Contributing to the development of a Neural Network architecture for a multi-robotic coverage control systems, with a focus on the integration of Spatio-Temporal features to enhance performance in dynamic environments.</p>
             <p>• Developing a CNN-based perception module that processes sensor data with a limited field of view, expected to enhance obstacle detection accuracy by 25% and improving overall decentralized navigation efficiency.</p>
             <p>• Engineering a Spatio-Temporal Graph Neural Network with attention mechanisms using PyTorch, aimed to enhance robot communication and coordination by 40%, resulting in more efficient decision-making.</p>
           </VerticalTimelineElement>
@@ -34,7 +34,7 @@ function Timeline() {
             <h2 className="vertical-timeline-element-title">InvestIQ LLC</h2>
             <h3 className="vertical-timeline-element-title">Software Engineer</h3>
             <h4 className="vertical-timeline-element-subtitle">Pittsburgh, PA</h4>
-            <p>• Developed a neural network in PyTorch for analyzing tech stocks, using CNNs to identify price patterns and LSTMs to capture sequential trends, resulting in over 85% accuracy in stock price predictions.</p>
+            <p>• Developed a neural network in PyTorch for analyzing tech stocks, using CNNs to identify price patterns and LSTMs to capture sequential trends, resulting in over 85% accuracy in historical stock price predictions.</p>
             <p>• Collaborated with business analysts to integrate stock market technical indicators like RSI, MACD, and Bollinger Bands into the neural network, enhancing the model's input features and increasing prediction accuracy by 10%.</p>
             <p>• Applied advanced data cleaning and preprocessing techniques using Python and Pandas to manage and refine over 500,000 data records from diverse sources, enhancing data quality and model training efficiency by 30%.</p>
           </VerticalTimelineElement>
