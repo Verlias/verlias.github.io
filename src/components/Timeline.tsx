@@ -21,9 +21,9 @@ function Timeline() {
             <h2 className="vertical-timeline-element-title">Zhou Robotics Lab</h2>
             <h3 className="vertical-timeline-element-title">Machine Learning Researcher</h3>
             <h4 className="vertical-timeline-element-subtitle">Philadelphia, PA</h4>
-            <p>• Contributing to the development of a Neural Network architecture for a multi-robotic coverage control systems, with a focus on the integration of Spatio-Temporal features to enhance performance in dynamic environments.</p>
-            <p>• Developing a CNN-based perception module that processes sensor data with a limited field of view, expected to enhance obstacle detection accuracy by 25% and improving overall decentralized navigation efficiency.</p>
-            <p>• Engineering a Spatio-Temporal Graph Neural Network with attention mechanisms using PyTorch, aimed to enhance robot communication and coordination by 40%, resulting in more efficient decision-making.</p>
+            <p>• Developed Python library for Neural Network Architecture to support multi-robot coverage control, leveraging Spatio-Temporal features for efficient perception, communication, and action loops in decentralized systems.</p>
+            <p>• Engineering Spatio-Temporal Graph Neural Network (STGNN) with attention mechanisms using PyTorch to process over 100,000 unique spatio-temporal data points across 32-robot multi-agent system.</p>
+            <p>• Modifying CNN-based deep-learning model that processes sensor data with limited vision, enhancing multi-agent robot obstacle detection accuracy by 20% and improving decentralized navigation efficiency.</p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
@@ -34,7 +34,7 @@ function Timeline() {
             <h2 className="vertical-timeline-element-title">InvestIQ LLC</h2>
             <h3 className="vertical-timeline-element-title">Software Engineer</h3>
             <h4 className="vertical-timeline-element-subtitle">Pittsburgh, PA</h4>
-            <p>• Developed a neural network in PyTorch for analyzing tech stocks, using CNNs to identify price patterns and LSTMs to capture sequential trends, resulting in over 85% accuracy in historical stock price predictions.</p>
+            <p>•Engineered financial robo-advisor serving 500+ active users, utilizing CNN and LSTM-based models for stock prediction and sentiment analysis, providing actionable stock market investment advice.</p>
             <p>• Collaborated with business analysts to integrate stock market technical indicators like RSI, MACD, and Bollinger Bands into the neural network, enhancing the model's input features and increasing prediction accuracy by 10%.</p>
             <p>• Applied advanced data cleaning and preprocessing techniques using Python and Pandas to manage and refine over 500,000 data records from diverse sources, enhancing data quality and model training efficiency by 30%.</p>
           </VerticalTimelineElement>
@@ -47,9 +47,9 @@ function Timeline() {
             <h2 className="vertical-timeline-element-title">University of Pennsylania, Stevens Center for Innovation in Finance</h2>
             <h3 className="vertical-timeline-element-title">Software Engineer Intern</h3>
             <h4 className="vertical-timeline-element-subtitle">Philadelphia, PA</h4>
-            <p>• Spearheaded cross-functional collaboration within an Agile framework to conceptualize and develop a college financial analysis tool, leveraging Java, PostgreSQL, and Spring Boot on AWS EC2 instances.</p>
-            <p>• Developed the Student Aid Index (SAI) algorithm, enhancing financial assessment accuracy by 92.99%, utilizing AWS Lambda for serverless computing and AWS S3 for secure storage of algorithmic data inputs.</p>
-            <p>• Enhance client-side data retrieval by optimizing SQL query performance and implementing efficient caching strategies using PostgreSQL, resulting in a 25% reduction in data access latency and improved user experience.</p>
+            <p>• Built Web App for Stevens Center to assist prospective college students in analyzing their potential college aid by leveraging Java and Spring Boot, accomplishing reliable evaluations for estimated user base of 2k+ students.</p>
+            <p>• Created the Student Aid Index algorithm, improving financial assessment accuracy by 97% through statistical modeling of income, asset data, and enrollment variables, utilizing AWS S3 for algorithmic data storage.</p>
+            <p>• Enhanced client-side data retrieval by optimizing SQL query performance and implementing efficient caching strategies within PostgreSQL to reduce data access latency by 8%.</p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
