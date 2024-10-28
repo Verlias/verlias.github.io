@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.0e792b69.css",
-    "main.js": "/static/js/main.1d2971dc.js",
+    "main.js": "/static/js/main.0295aefd.js",
     "static/js/453.9415623e.chunk.js": "/static/js/453.9415623e.chunk.js",
     "static/media/Prospera.png": "/static/media/Prospera.80c734d1c5ffa99d2b46.png",
     "static/media/DrexelMaps.png": "/static/media/DrexelMaps.cd125bf3fc3365bb502f.png",
@@ -13,11 +13,11 @@
     "static/media/Financy.png": "/static/media/Financy.472ae257662722a455ef.png",
     "index.html": "/index.html",
     "main.0e792b69.css.map": "/static/css/main.0e792b69.css.map",
-    "main.1d2971dc.js.map": "/static/js/main.1d2971dc.js.map",
+    "main.0295aefd.js.map": "/static/js/main.0295aefd.js.map",
     "453.9415623e.chunk.js.map": "/static/js/453.9415623e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0e792b69.css",
-    "static/js/main.1d2971dc.js"
+    "static/js/main.0295aefd.js"
   ]
 }
