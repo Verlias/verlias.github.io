@@ -21,7 +21,7 @@ function Timeline() {
             <h2 className="vertical-timeline-element-title">Zhou Robotics Lab</h2>
             <h3 className="vertical-timeline-element-title">Machine Learning Researcher</h3>
             <h4 className="vertical-timeline-element-subtitle">Philadelphia, PA</h4>
-            <p>• Developed Python library for Neural Network Architecture to support multi-robot coverage control, leveraging Spatio-Temporal features for efficient perception, communication, and action loops in decentralized systems.</p>
+            <p>• Developing Python library for Neural Network Architecture to support multi-robot coverage control, leveraging Spatio-Temporal features for efficient perception, communication, and action loops in decentralized systems.</p>
             <p>• Engineering Spatio-Temporal Graph Neural Network (STGNN) with attention mechanisms using PyTorch to process over 100,000 unique spatio-temporal data points across 32-robot multi-agent system.</p>
             <p>• Modifying CNN-based deep-learning model that processes sensor data with limited vision, enhancing multi-agent robot obstacle detection accuracy by 20% and improving decentralized navigation efficiency.</p>
           </VerticalTimelineElement>
