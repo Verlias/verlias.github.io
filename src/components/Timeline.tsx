@@ -18,6 +18,17 @@ function Timeline() {
             iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
+            <h2 className="vertical-timeline-element-title">Palantir Technologies</h2>
+            <h3 className="vertical-timeline-element-title">Software Developer Fellow</h3>
+            <h4 className="vertical-timeline-element-subtitle">New York, NY</h4>
+            <p>• Developing AI-driven solutions using Palantir’s Artificial Intelligence Platform, leveraging machine learning models to optimize decision-making, streamline workflows, and enhance operational efficiency.</p>
+          </VerticalTimelineElement>
+          <VerticalTimelineElement
+            className="vertical-timeline-element--work"
+            date="May 2024 - Present"
+            iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
+            icon={<FontAwesomeIcon icon={faBriefcase} />}
+          >
             <h2 className="vertical-timeline-element-title">Zhou Robotics Lab</h2>
             <h3 className="vertical-timeline-element-title">Machine Learning Researcher</h3>
             <h4 className="vertical-timeline-element-subtitle">Philadelphia, PA</h4>
