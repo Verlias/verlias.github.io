@@ -13,15 +13,28 @@ function Timeline() {
         <h1>Career History</h1>
         <VerticalTimeline>
           <VerticalTimelineElement
+              className="vertical-timeline-element--work"
+              date="March 2025 - Present"
+              iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
+              icon={<FontAwesomeIcon icon={faBriefcase} />}
+            >
+              <h2 className="vertical-timeline-element-title">Comcast</h2>
+              <h3 className="vertical-timeline-element-title">Software Engineer Intern</h3>
+              <h4 className="vertical-timeline-element-subtitle">Philadelphia, PA</h4>
+              <p>• Incoming Software Engineer Intern Spring/Summer 2025 on Comcast Next Generation Access Networks Team </p>
+            </VerticalTimelineElement>
+          <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            date="May 2024 - Present"
+            date="December 2024 - February 2025"
             iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
             <h2 className="vertical-timeline-element-title">Palantir Technologies</h2>
-            <h3 className="vertical-timeline-element-title">Software Developer Fellow</h3>
+            <h3 className="vertical-timeline-element-title">Software Engineer Fellow</h3>
             <h4 className="vertical-timeline-element-subtitle">New York, NY</h4>
-            <p>• Developing AI-driven solutions using Palantir’s Artificial Intelligence Platform, leveraging machine learning models to optimize decision-making, streamline workflows, and enhance operational efficiency.</p>
+            <p>• Developed cybersecurity platform with Palantir AIP to analyze 1M+ data points from SIEM logs, intrusion detection systems, and malware repos, displaying 84% accuracy in detecting threats to critical infrastructures. </p>
+            <p>• Reduced threat response times by 27% by implementing machine learning pipelines, using TensorFlow for training and Apache Kafka for real-time processing, enhancing cyberattack mitigation.</p>
+            <p>• Mapped cyber-attack patterns with Palantir Knowledge Graph, resulting in 13% improvement in threat detection.</p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
@@ -32,9 +45,9 @@ function Timeline() {
             <h2 className="vertical-timeline-element-title">Zhou Robotics Lab</h2>
             <h3 className="vertical-timeline-element-title">Machine Learning Researcher</h3>
             <h4 className="vertical-timeline-element-subtitle">Philadelphia, PA</h4>
-            <p>• Developing Python library for Neural Network Architecture to support multi-robot coverage control, leveraging Spatio-Temporal features for efficient perception, communication, and action loops in decentralized systems.</p>
-            <p>• Engineering Spatio-Temporal Graph Neural Network (STGNN) with attention mechanisms using PyTorch to process over 100,000 unique spatio-temporal data points across 32-robot multi-agent system.</p>
-            <p>• Modifying CNN-based deep-learning model that processes sensor data with limited vision, enhancing multi-agent robot obstacle detection accuracy by 20% and improving decentralized navigation efficiency.</p>
+            <p>• Developed Python library for Neural Network Architecture to support multi-robot coverage control, leveraging Spatio-Temporal features for efficient perception, communication, and action loops in decentralized systems.</p>
+            <p>• Engineered Spatio-Temporal Graph Neural Network (STGNN) with attention mechanisms using PyTorch to process over 100,000 unique spatio-temporal data points across 32-robot multi-agent system.</p>
+            <p>• Modified CNN-based deep-learning model, enhancing multi-agent robot obstacle detection accuracy by 20%.</p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
@@ -45,9 +58,9 @@ function Timeline() {
             <h2 className="vertical-timeline-element-title">InvestIQ LLC</h2>
             <h3 className="vertical-timeline-element-title">Software Engineer</h3>
             <h4 className="vertical-timeline-element-subtitle">Pittsburgh, PA</h4>
-            <p>•Engineered financial robo-advisor serving 500+ active users, utilizing CNN and LSTM-based models for stock prediction and sentiment analysis, providing actionable stock market investment advice.</p>
-            <p>• Collaborated with business analysts to integrate stock market technical indicators like RSI, MACD, and Bollinger Bands into the neural network, enhancing the model's input features and increasing prediction accuracy by 10%.</p>
-            <p>• Applied advanced data cleaning and preprocessing techniques using Python and Pandas to manage and refine over 500,000 data records from diverse sources, enhancing data quality and model training efficiency by 30%.</p>
+            <p>• Engineered financial robo-advisor on full stack solution serving 500+ active users, utilizing LSTM-based model for stock prediction and sentiment analysis, providing actionable stock market investment advice.</p>
+            <p>• Collaborated with business analysts to integrate stock market technical indicators into the neural network on AWS SageMaker, enhancing the model's input features and prediction accuracy by 10%.</p>
+            <p>• Orchestrated CI/CD pipelines and unit tests, improving deployment efficiency by 24% and test coverage by 32%.</p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
@@ -58,9 +71,9 @@ function Timeline() {
             <h2 className="vertical-timeline-element-title">University of Pennsylania, Stevens Center for Innovation in Finance</h2>
             <h3 className="vertical-timeline-element-title">Software Engineer Intern</h3>
             <h4 className="vertical-timeline-element-subtitle">Philadelphia, PA</h4>
-            <p>• Built Web App for Stevens Center to assist prospective college students in analyzing their potential college aid by leveraging Java and Spring Boot, accomplishing reliable evaluations for estimated user base of 2k+ students.</p>
-            <p>• Created the Student Aid Index algorithm, improving financial assessment accuracy by 97% through statistical modeling of income, asset data, and enrollment variables, utilizing AWS S3 for algorithmic data storage.</p>
-            <p>• Enhanced client-side data retrieval by optimizing SQL query performance and implementing efficient caching strategies within PostgreSQL to reduce data access latency by 8%.</p>
+            <p>• Built Web App for Stevens Center to assist prospective college students in analyzing their potential college aid by leveraging Java and Spring Boot, accomplishing reliable evaluations for estimated user base of 3k+ students. </p>
+            <p>• Migrated data processing workflows to AWS S3 and Lambda, streamlining data handling and reducing processing time by 30%, while ensuring better scalability for handling high volumes of financial aid data.</p>
+            <p>• Optimized SQL queries and implemented caching strategies within PostgreSQL to reduce access latency by 8%.</p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"

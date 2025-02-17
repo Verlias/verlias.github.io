@@ -16,6 +16,7 @@ const labelsFirst = [
     "Spring Boot",
     "Flask",
     "Python",
+    "Go",
     "C#",
     "C/C++",
     "Java",
@@ -27,12 +28,16 @@ const labelsFirst = [
 const labelsSecond = [
     "Git",
     "GitHub Actions",
+    "Gitlab",
+    "Jenkins",
+    "Jira",
+    "CI/CD",
     "Docker",
+    "Kubernetes",
     "AWS",
     "Azure",
     "Linux",
     "Snowflake",
-    "Pandas",
     "Selenium",
 ];
 
