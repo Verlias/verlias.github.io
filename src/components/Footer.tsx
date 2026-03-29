@@ -1,7 +1,6 @@
 import React from "react";
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import EmailIcon from '@mui/icons-material/Email';
 import '../assets/styles/Footer.scss'
 
 function Footer() {
@@ -21,9 +20,6 @@ function Footer() {
           </a>
           <a href="https://www.linkedin.com/in/loganvoravong/" target="_blank" rel="noreferrer" className="footer-link" aria-label="LinkedIn">
             <LinkedInIcon />
-          </a>
-          <a href="mailto:loganvoravong@gmail.com" className="footer-link" aria-label="Email">
-            <EmailIcon />
           </a>
         </div>
         <p className="footer-copyright">© {new Date().getFullYear()} Logan Voravong</p>

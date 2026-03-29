@@ -8,17 +8,14 @@ const labelsInfra = [
     "Kubernetes",
     "Docker",
     "AWS",
-    "Azure",
     "Linux",
     "Jenkins",
     "GitHub Actions",
     "CI/CD",
     "Grafana",
     "Prometheus",
-    "Datadog",
-    "Snowflake",
     "Terraform",
-    "Selenium",
+    "Concourse",
 ];
 
 const labelsML = [
@@ -28,16 +25,15 @@ const labelsML = [
     "Python",
     "Pandas",
     "NumPy",
-    "AWS SageMaker",
-    "OpenAI",
-    "MLflow",
 ];
 
 const labelsFullStack = [
+    "Python",
+    "Go",
+    "C#",
+    ".NET Framework",
     "React.js",
     "Node.js",
-    "Go",
-    "Python",
     "Java",
     "C/C++",
     "Spring Boot",

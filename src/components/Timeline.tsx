@@ -35,7 +35,7 @@ const experiences: Experience[] = [
         role: "Machine Learning Researcher",
         description: "Small Language Model Fine-Tuning · Multi-Agent Flocking Systems",
         location: "Philadelphia, PA",
-        date: "May 2024 — Present",
+        date: "May 2024 — April 2025",
         color: "cyan"
     }
 ];
