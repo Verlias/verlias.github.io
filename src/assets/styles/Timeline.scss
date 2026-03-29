@@ -1,38 +1,183 @@
-.vertical-timeline span {
-    color: white;
-    font-family: 'Courier Prime', monospace;
+/* ========================================
+   TIMELINE SECTION — Dark Theme
+   ======================================== */
+
+.timeline-section {
+  position: relative;
+  padding: var(--section-padding);
+  overflow: hidden;
 }
 
-.vertical-timeline p {
-    color: rgb(39, 40, 34);
+.timeline-section::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(34, 211, 238, 0.05) 0%, transparent 70%);
+  pointer-events: none;
 }
 
-.vertical-timeline-element p {
-    color: rgb(39, 40, 34);
+.timeline-header {
+  text-align: center;
+  margin-bottom: 64px;
+  position: relative;
+  z-index: 1;
 }
 
-.vertical-timeline-element h3 {
-    color: rgb(39, 40, 34);
+/* Track layout */
+.timeline-track {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  z-index: 1;
 }
 
-.vertical-timeline-element h4 {
-    color: rgb(39, 40, 34);
+/* Vertical line */
+.timeline-line {
+  position: absolute;
+  left: 27px;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    var(--border-color) 10%,
+    var(--border-color) 90%,
+    transparent
+  );
 }
 
-.vertical-timeline-element span {
-    color: rgb(39, 40, 34);
+/* Card */
+.timeline-card {
+  padding: 28px 28px 28px 72px;
+  position: relative;
 }
 
-.vertical-timeline-element .vertical-timeline-element-date {
-    color: white;
+/* Dot on the line */
+.timeline-dot-wrapper {
+  position: absolute;
+  left: 12px;
+  top: 32px;
 }
 
-.svg-inline--fa {
-    color: white;
+.timeline-dot {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--bg-secondary);
+  border: 2px solid rgba(129, 140, 248, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-primary);
+  font-size: 0.75rem;
+  transition: all var(--transition-base);
 }
 
-@media screen and (max-width: 1170px) {
-    .vertical-timeline-element .vertical-timeline-element-date {
-        color: rgb(39, 40, 34);
-    }
+.timeline-card:hover .timeline-dot {
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 16px rgba(129, 140, 248, 0.2);
+}
+
+.timeline-dot.cyan {
+  border-color: rgba(34, 211, 238, 0.3);
+  color: var(--accent-secondary);
+}
+
+.timeline-card:hover .timeline-dot.cyan {
+  border-color: var(--accent-secondary);
+  box-shadow: 0 0 16px rgba(34, 211, 238, 0.2);
+}
+
+/* Card header + meta */
+.timeline-card-header {
+  margin-bottom: 0;
+}
+
+.timeline-card-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.timeline-date {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--accent-primary);
+  letter-spacing: 0.02em;
+}
+
+.timeline-date.cyan {
+  color: var(--accent-secondary);
+}
+
+.timeline-location {
+  font-size: 0.8rem;
+  color: var(--text-tertiary);
+}
+
+.timeline-card-header h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.timeline-card-header h3 {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin-top: 2px;
+}
+
+.timeline-description {
+  font-size: 0.85rem;
+  color: var(--text-tertiary);
+  margin-top: 8px;
+  letter-spacing: 0.02em;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .timeline-section {
+    padding: var(--section-padding-mobile);
+  }
+
+  .timeline-header {
+    margin-bottom: 40px;
+  }
+
+  .timeline-card {
+    padding: 24px 20px 24px 60px;
+  }
+
+  .timeline-dot-wrapper {
+    left: 8px;
+  }
+
+  .timeline-line {
+    left: 23px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .timeline-card {
+    padding: 20px 16px 20px 52px;
+  }
+
+  .timeline-line {
+    left: 19px;
+  }
+
+  .timeline-dot-wrapper {
+    left: 4px;
+  }
 }

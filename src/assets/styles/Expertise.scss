@@ -1,85 +1,174 @@
-.skills-container {
-    padding: 5% 10%;
-    display: flex;
-    flex-direction: column;
-    text-align: left;
+/* ========================================
+   EXPERTISE SECTION — Dark Theme
+   ======================================== */
 
-    svg {
-        color: white;
-    }
-}
-  
-.skills-container .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 50px;
-}
-  
-.skills-container .skills-grid .skill {
-    align-items: center;
-    text-align: left;
-}
-  
-.chip {
-    color: rgb(39, 40, 34) !important;
-    background-color: white !important;
-    font-size: 0.8rem !important;
-    height: 25px !important;
-  
-    span {
-        font-family: 'Courier Prime', monospace;
-        color: rgb(39, 40, 34);
-    }
-  
-    svg {
-        height: 15px !important;
-    }
+.expertise-section {
+  position: relative;
+  padding: var(--section-padding);
+  overflow: hidden;
 }
 
-.flex-chips {
-    line-height: 2;
-    margin: 0.5;
-
-    .chip-title {
-        color: white;
-        padding-right: 10px;
-    }
+/* Subtle background accent */
+.expertise-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(129, 140, 248, 0.06) 0%, transparent 70%);
+  pointer-events: none;
 }
 
-.flex-chips .MuiChip-root {
-    margin-right: 0.5em;
+.expertise-header {
+  text-align: center;
+  margin-bottom: 64px;
+  position: relative;
+  z-index: 1;
 }
 
-.flex-chips .MuiChip-outlined {
-    background-color: #e0e0e0;
-    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-        monospace;
+/* Expertise Grid — 3 column */
+.expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
 }
 
-.flex-chips .MuiChip-outlined span {
-    color: rgb(39, 40, 34);
+/* Card */
+.expertise-card {
+  padding: 36px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+  overflow: hidden;
+
+  /* Subtle glow on top border */
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--accent-gradient);
+    opacity: 0;
+    transition: opacity var(--transition-base);
+  }
+
+  &:hover::before {
+    opacity: 1;
+  }
 }
 
-@media screen {
-    @media (max-width: 768px) {
-        .skills-container {
-            display: block;
-            padding-left: 5%;
-            padding-right: 5%;
-        }
-    
-        .skills-container .skills-grid {
-            display: initial;
-        }
-        
-        .skills-container .skills-grid .skill {
-            padding-bottom: 5%;
-        }
-    }
+/* Card number label */
+.card-number {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+  letter-spacing: 0.1em;
+}
 
-    @media (max-width: 567px) {
-        .skills {
-            font-size: 12px;
-        }
-    }
+/* Icon wrapper */
+.expertise-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-md);
+  background: var(--accent-glow);
+  color: var(--accent-primary);
+  font-size: 1.3rem;
+  border: 1px solid rgba(129, 140, 248, 0.1);
+  transition: all var(--transition-base);
+}
+
+.expertise-card:hover .expertise-icon-wrapper {
+  transform: scale(1.05);
+  box-shadow: 0 0 24px rgba(129, 140, 248, 0.15);
+}
+
+.expertise-icon-wrapper.cyan {
+  background: var(--accent-glow-cyan);
+  color: var(--accent-secondary);
+  border-color: rgba(34, 211, 238, 0.1);
+}
+
+.expertise-card:hover .expertise-icon-wrapper.cyan {
+  box-shadow: 0 0 24px rgba(34, 211, 238, 0.15);
+}
+
+.expertise-icon-wrapper.violet {
+  background: var(--accent-glow-violet);
+  color: var(--accent-tertiary);
+  border-color: rgba(167, 139, 250, 0.1);
+}
+
+.expertise-card:hover .expertise-icon-wrapper.violet {
+  box-shadow: 0 0 24px rgba(167, 139, 250, 0.15);
+}
+
+.expertise-card h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+}
+
+.expertise-card > p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  flex-grow: 1;
+}
+
+/* Tags area */
+.expertise-tags {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.tag-label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 500;
+}
+
+.tags-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+/* Responsive */
+@media screen and (max-width: 1024px) {
+  .expertise-grid {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .expertise-section {
+    padding: var(--section-padding-mobile);
+  }
+
+  .expertise-header {
+    margin-bottom: 40px;
+  }
+
+  .expertise-card {
+    padding: 28px 22px;
+  }
 }

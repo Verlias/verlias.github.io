@@ -1,15 +1,107 @@
-footer {
+/* ========================================
+   FOOTER — Dark Theme
+   ======================================== */
+
+.site-footer {
+  position: relative;
+  padding: 0;
+  margin-top: 40px;
+}
+
+.footer-gradient-line {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(129, 140, 248, 0.2), rgba(34, 211, 238, 0.2), transparent);
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 8%;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.footer-name {
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+}
+
+.footer-tagline {
+  font-size: 0.82rem;
+  color: var(--text-tertiary);
+  font-family: var(--font-mono);
+  letter-spacing: 0.01em;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-sm);
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  transition: all var(--transition-base);
+
+  svg {
+    font-size: 1.1rem;
+  }
+
+  &:hover {
+    color: var(--accent-primary);
+    border-color: var(--border-color-hover);
+    background: var(--accent-glow);
+    transform: translateY(-2px);
+  }
+}
+
+.footer-copyright {
+  width: 100%;
+  text-align: center;
+  font-size: 0.78rem;
+  color: var(--text-tertiary);
+  padding-top: 24px;
+  border-top: 1px solid var(--border-color);
+  margin-top: 16px;
+  font-family: var(--font-mono);
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding: 32px 5%;
+    gap: 20px;
+  }
 
-    svg {
-        width: 1.1em !important;
-        height: 1.1em !important;
-        margin-right: 10px;
-    }
+  .footer-brand {
+    align-items: center;
+  }
 
-    p {
-        font-size: 0.8em;
-    }
+  .footer-copyright {
+    margin-top: 8px;
+  }
 }

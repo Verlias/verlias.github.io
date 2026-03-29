@@ -6,37 +6,110 @@ import STGNN from '../assets/images/STGNN.png';
 import Prospera from '../assets/images/Prospera.png';
 import '../assets/styles/Project.scss';
 
-function Project() {
-    return(
-    <div className="projects-container" id="projects">
-        <h1>Personal Projects</h1>
-        <div className="projects-grid">
-            <div className="project">
-                <a href="https://github.com/Verlias/PennApps2025-Prospera" target="_blank" rel="noreferrer"><img src={Prospera} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://github.com/Verlias/PennApps2025-Prospera" target="_blank" rel="noreferrer"><h2>PennApps 2025: Prospera</h2></a>
-                <p><b>Achieved Top 10 in Best Design</b> at the <b>University of Pennsylvania Hackathon: PennApps</b></p>
-                <p>Prospera is an AI-powered budgeting app that helps users manage their finances by analyzing spending patterns and providing personalized recommendations. It integrates real-time financial data and features a secure chatbot for quick financial insights.</p>            </div>
-            <div className="project">
-                <a href="https://github.com/Verlias/DrexelMaps" target="_blank" rel="noreferrer"><img src={DrexelMaps} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://github.com/Verlias/DrexelMaps" target="_blank" rel="noreferrer"><h2>Drexel Maps</h2></a>
-                <p>Drexel Maps is a web application built using the MERN stack (MongoDB, Express.js, React, and Node.js) aimed at helping students locate their classes. It leverages the A* algorithm to provide users with efficient routes, detailed floor plans of buildings, and directions to get to their destination.</p>
-            </div>
-            <div className="project">
-                <a href="https://github.com/Verlias/MelodyMatch-Codefest2024" target="_blank" rel="noreferrer"><img src={MelodyMatch} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://github.com/Verlias/MelodyMatch-Codefest2024" target="_blank" rel="noreferrer"><h2>CodeFest 2024: Melody Match</h2></a>
-                <p>MelodyMatch combines genre filtering and audio analysis techniques to offer personalized music recommendations, implemented with Python's scikit-learn, Flask, and React.</p>
-            </div>
-            <div className="project">
-                <a href="https://github.com/Verlias/Financy" target="_blank" rel="noreferrer"><img src={Financy} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://github.com/Verlias/Financy" target="_blank" rel="noreferrer"><h2>Financy</h2></a>
-                <p>Financy is a Web Application aimed to bridge the gap in financial education for adolescents by providing practical tools and resources to empower them with essential financial skills beyond traditional classroom learning. Built on a MERN Stack.</p>
-            </div>
-            <div className="project">
-                <a href="https://github.com/Zhourobotics" target="_blank" rel="noreferrer"><img src={STGNN} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://github.com/Zhourobotics" target="_blank" rel="noreferrer"><h2>Zhou Robotics: LPAC-STGNN</h2></a>
-                <p>Engineered an Learnable Perception-Action-Communication architecture for multi-robotic coverage control, integrating a Spatio-Temporal Graph Neural Network with attention mechanisms and low-bandwidth communication modules, enhancing overall efficiency.</p>
-            </div>
+interface ProjectData {
+    title: string;
+    description: string;
+    image: string;
+    link: string;
+    tags: string[];
+    highlight?: string;
+}
 
+const projects: ProjectData[] = [
+    {
+        title: "LPAC-STGNN",
+        description: "Engineered a Learnable Perception-Action-Communication architecture for multi-robotic coverage control, integrating a Spatio-Temporal Graph Neural Network with attention mechanisms and low-bandwidth communication modules.",
+        image: STGNN,
+        link: "https://github.com/Zhourobotics",
+        tags: ["PyTorch", "Python", "GNN", "Multi-Agent Systems"],
+        highlight: "Zhou Robotics Lab"
+    },
+    {
+        title: "Prospera",
+        description: "AI-powered budgeting app that analyzes spending patterns and provides personalized recommendations, integrating real-time financial data with a secure chatbot for quick financial insights.",
+        image: Prospera,
+        link: "https://github.com/Verlias/PennApps2025-Prospera",
+        tags: ["React", "Python", "OpenAI", "Finance"],
+        highlight: "Top 10 Best Design — PennApps"
+    },
+    {
+        title: "Drexel Maps",
+        description: "MERN stack web app helping students locate classes with A* pathfinding, detailed floor plans, and efficient routing across campus buildings.",
+        image: DrexelMaps,
+        link: "https://github.com/Verlias/DrexelMaps",
+        tags: ["React", "Node.js", "MongoDB", "A* Algorithm"]
+    },
+    {
+        title: "Melody Match",
+        description: "Music recommendation engine combining genre filtering and audio analysis techniques using Python's scikit-learn, Flask, and React.",
+        image: MelodyMatch,
+        link: "https://github.com/Verlias/MelodyMatch-Codefest2024",
+        tags: ["Python", "Scikit-Learn", "Flask", "React"],
+        highlight: "CodeFest 2024"
+    },
+    {
+        title: "Financy",
+        description: "Web application bridging the gap in financial education for adolescents with practical tools and resources for essential financial skills.",
+        image: Financy,
+        link: "https://github.com/Verlias/Financy",
+        tags: ["MongoDB", "Express", "React", "Node.js"]
+    },
+];
+
+function ProjectCard({ project }: { project: ProjectData }) {
+    return (
+        <a 
+            href={project.link} 
+            target="_blank" 
+            rel="noreferrer" 
+            className="project-card glass-card"
+        >
+            <div className="project-image">
+                <img src={project.image} alt={project.title} />
+                <div className="project-image-overlay"></div>
+            </div>
+            <div className="project-content">
+                {project.highlight && (
+                    <span className="project-highlight">{project.highlight}</span>
+                )}
+                <h3>{project.title}</h3>
+                <p>{project.description}</p>
+                <div className="project-tags">
+                    {project.tags.map((tag, tagIndex) => (
+                        <span key={tagIndex} className="skill-tag">{tag}</span>
+                    ))}
+                </div>
+            </div>
+            <div className="project-link-indicator">
+                <svg width="18" height="18" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+            </div>
+        </a>
+    );
+}
+
+function Project() {
+    const [featured, ...rest] = projects;
+    
+    return(
+    <div className="projects-section" id="projects">
+        <div className="projects-header">
+            <div className="section-label">Work</div>
+            <h1 className="section-title">Featured Projects</h1>
+            <p className="section-subtitle">Things I've built and contributed to</p>
+        </div>
+        
+        {/* Spotlight: Featured project */}
+        <div className="project-spotlight">
+            <ProjectCard project={featured} />
+        </div>
+
+        {/* Remaining projects grid */}
+        <div className="projects-grid">
+            {rest.map((project, index) => (
+                <ProjectCard key={index} project={project} />
+            ))}
         </div>
     </div>
     );
