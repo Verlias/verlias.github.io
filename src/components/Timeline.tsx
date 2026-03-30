@@ -25,7 +25,7 @@ const experiences: Experience[] = [
     {
         company: "Comcast",
         role: "Software Engineer Intern",
-        description: "Next Generation Access Networks · Infrastructure",
+        description: "Network Orchestration and Monitoring Deployment (NOMAD) · Infrastructure",
         location: "Philadelphia, PA",
         date: "March 2025 — March 2026",
         color: "indigo"
