@@ -88,13 +88,13 @@ function Expertise() {
                 </div>
             </div>
 
-            {/* 3. Full Stack Development */}
+            {/* 3. Backend */}
             <div className="expertise-card glass-card">
                 <span className="card-number">03</span>
                 <div className="expertise-icon-wrapper violet">
                     <FontAwesomeIcon icon={faCode} />
                 </div>
-                <h3>Full Stack Development</h3>
+                <h3>Backend</h3>
                 <p>Building end-to-end applications with modern frameworks and languages — from React frontends and Go microservices to Python backends and relational databases.</p>
                 <div className="expertise-tags">
                     <span className="tag-label">Tech stack</span>

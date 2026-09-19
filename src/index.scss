@@ -15,28 +15,29 @@
   --text-primary: #e8eaf0;
   --text-secondary: #8b8fa8;
   --text-tertiary: #565a72;
-  --text-accent: #818cf8;
+  --text-accent: #326ce5;
 
-  --accent-primary: #818cf8;
-  --accent-secondary: #22d3ee;
-  --accent-tertiary: #a78bfa;
-  --accent-warm: #f472b6;
-  --accent-gradient: linear-gradient(135deg, #818cf8 0%, #22d3ee 100%);
-  --accent-gradient-warm: linear-gradient(135deg, #818cf8 0%, #a78bfa 50%, #f472b6 100%);
-  --accent-gradient-hover: linear-gradient(135deg, #6366f1 0%, #06b6d4 100%);
-  --accent-glow: rgba(129, 140, 248, 0.12);
-  --accent-glow-cyan: rgba(34, 211, 238, 0.12);
-  --accent-glow-violet: rgba(167, 139, 250, 0.12);
+  --accent-primary: #326ce5;
+  --accent-secondary: #10b981;
+  --accent-tertiary: #06b6d4;
+  --accent-warm: #3b82f6;
+  --accent-gradient: linear-gradient(135deg, #326ce5 0%, #10b981 100%);
+  --accent-gradient-warm: linear-gradient(135deg, #326ce5 0%, #06b6d4 50%, #3b82f6 100%);
+  --accent-gradient-hover: linear-gradient(135deg, #2563eb 0%, #059669 100%);
+  --accent-glow: rgba(50, 108, 229, 0.15);
+  --accent-glow-cyan: rgba(16, 185, 129, 0.12);
+  --accent-glow-violet: rgba(6, 182, 212, 0.12);
 
   --border-color: rgba(255, 255, 255, 0.06);
-  --border-color-hover: rgba(129, 140, 248, 0.25);
+  --border-color-hover: rgba(50, 108, 229, 0.35);
 
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
   --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
   --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.5);
   --shadow-xl: 0 20px 60px rgba(0, 0, 0, 0.6);
-  --shadow-glow: 0 0 40px rgba(129, 140, 248, 0.08);
-  --shadow-glow-cyan: 0 0 40px rgba(34, 211, 238, 0.08);
+  --shadow-glow: 0 0 40px rgba(50, 108, 229, 0.15);
+  --shadow-glow-cyan: 0 0 40px rgba(16, 185, 129, 0.12);
+
 
   /* Typography */
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;

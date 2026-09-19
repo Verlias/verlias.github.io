@@ -1,9 +1,9 @@
 import React from "react";
 import DrexelMaps from '../assets/images/DrexelMaps.png';
-import MelodyMatch from '../assets/images/MelodyMatch.png';
-import Financy from '../assets/images/Financy.png';
-import STGNN from '../assets/images/STGNN.png';
 import Prospera from '../assets/images/Prospera.png';
+import GEMM from '../assets/images/GEMM.jpg';
+import Homelab from '../assets/images/Homelab.jpg';
+import GraphSpec from '../assets/images/GraphSpec.jpg';
 import '../assets/styles/Project.scss';
 
 interface ProjectData {
@@ -17,12 +17,26 @@ interface ProjectData {
 
 const projects: ProjectData[] = [
     {
-        title: "LPAC-STGNN",
-        description: "Engineered a Learnable Perception-Action-Communication architecture for multi-robotic coverage control, integrating a Spatio-Temporal Graph Neural Network with attention mechanisms and low-bandwidth communication modules.",
-        image: STGNN,
-        link: "https://github.com/Zhourobotics",
-        tags: ["PyTorch", "Python", "GNN", "Multi-Agent Systems"],
-        highlight: "Zhou Robotics Lab"
+        title: "High-Performance GEMM",
+        description: "Implemented contiguous-memory C++ matrix multiplication engine with cache-blocking and loop reordering to optimize CPU performance.",
+        image: GEMM,
+        link: "https://github.com/Verlias/matmul",
+        tags: ["C++", "HPC", "Performance Optimization"],
+        highlight: "Featured Project"
+    },
+    {
+        title: "Homelab",
+        description: "Designed multi-node Kubernetes cluster with automated Linux node provisioning using Ansible and Helm. Implemented automated workload recovery workflows.",
+        image: Homelab,
+        link: "#",
+        tags: ["Kubernetes", "Ansible", "Helm", "Infrastructure"]
+    },
+    {
+        title: "GraphSpec",
+        description: "Engineered telemetry pipeline for AI agent workflows with DAG-based visualization and replay system to flag hallucinations and execution bottlenecks.",
+        image: GraphSpec,
+        link: "#",
+        tags: ["Telemetry", "DAG", "Observability"]
     },
     {
         title: "Prospera",
@@ -38,21 +52,6 @@ const projects: ProjectData[] = [
         image: DrexelMaps,
         link: "https://github.com/Verlias/DrexelMaps",
         tags: ["React", "Node.js", "MongoDB", "A* Algorithm"]
-    },
-    {
-        title: "Melody Match",
-        description: "Music recommendation engine combining genre filtering and audio analysis techniques using Python's scikit-learn, Flask, and React.",
-        image: MelodyMatch,
-        link: "https://github.com/Verlias/MelodyMatch-Codefest2024",
-        tags: ["Python", "Scikit-Learn", "Flask", "React"],
-        highlight: "CodeFest 2024"
-    },
-    {
-        title: "Financy",
-        description: "Web application bridging the gap in financial education for adolescents with practical tools and resources for essential financial skills.",
-        image: Financy,
-        link: "https://github.com/Verlias/Financy",
-        tags: ["MongoDB", "Express", "React", "Node.js"]
     },
 ];
 
