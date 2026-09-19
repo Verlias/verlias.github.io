@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/static/css/main.4f92d3d1.css",
-    "main.js": "/static/js/main.26e5813d.js",
+    "main.css": "/static/css/main.bbdda972.css",
+    "main.js": "/static/js/main.3215362f.js",
     "static/js/453.9415623e.chunk.js": "/static/js/453.9415623e.chunk.js",
     "static/media/Prospera.png": "/static/media/Prospera.80c734d1c5ffa99d2b46.png",
     "static/media/DrexelMaps.png": "/static/media/DrexelMaps.cd125bf3fc3365bb502f.png",
-    "static/media/MelodyMatch.png": "/static/media/MelodyMatch.db55bb3d346f1278794f.png",
-    "static/media/STGNN.png": "/static/media/STGNN.1492261b23f307cb8d14.png",
+    "static/media/Homelab.jpg": "/static/media/Homelab.b3f4c2d9ebaadb1f72b9.jpg",
+    "static/media/GraphSpec.jpg": "/static/media/GraphSpec.f394e88fe529e70aacac.jpg",
+    "static/media/GEMM.jpg": "/static/media/GEMM.c9f64b10ee821a207580.jpg",
     "static/media/PFP.png": "/static/media/PFP.5585ae8bf07e57032811.png",
-    "static/media/Financy.png": "/static/media/Financy.472ae257662722a455ef.png",
     "index.html": "/index.html",
-    "main.4f92d3d1.css.map": "/static/css/main.4f92d3d1.css.map",
-    "main.26e5813d.js.map": "/static/js/main.26e5813d.js.map",
+    "main.bbdda972.css.map": "/static/css/main.bbdda972.css.map",
+    "main.3215362f.js.map": "/static/js/main.3215362f.js.map",
     "453.9415623e.chunk.js.map": "/static/js/453.9415623e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4f92d3d1.css",
-    "static/js/main.26e5813d.js"
+    "static/css/main.bbdda972.css",
+    "static/js/main.3215362f.js"
   ]
 }
