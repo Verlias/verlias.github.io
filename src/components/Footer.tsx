@@ -1,28 +1,20 @@
 import React from "react";
-import GitHubIcon from '@mui/icons-material/GitHub';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import '../assets/styles/Footer.scss'
 
 function Footer() {
   return (
-    <footer className="site-footer">
-      <div className="footer-gradient-line"></div>
+    <footer className="site-footer" id="contact">
       <div className="footer-content">
-        <div className="footer-brand">
-          <span className="footer-name">
-            Logan<span className="gradient-text"> Voravong</span>
-          </span>
-          <p className="footer-tagline">Software Engineer</p>
+        <p className="footer-command"><span>logan@portfolio</span>:~$ open contact</p>
+        <div className="footer-invitation">
+          <h2>Contact</h2>
+          <a href="https://www.linkedin.com/in/loganvoravong/" target="_blank" rel="noreferrer">LinkedIn</a>
         </div>
         <div className="footer-links">
-          <a href="https://github.com/Verlias" target="_blank" rel="noreferrer" className="footer-link" aria-label="GitHub">
-            <GitHubIcon />
-          </a>
-          <a href="https://www.linkedin.com/in/loganvoravong/" target="_blank" rel="noreferrer" className="footer-link" aria-label="LinkedIn">
-            <LinkedInIcon />
-          </a>
+          <a href="https://github.com/Verlias" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/loganvoravong/" target="_blank" rel="noreferrer">LinkedIn</a>
         </div>
-        <p className="footer-copyright">© {new Date().getFullYear()} Logan Voravong</p>
+        <p className="footer-copyright">session closed · © {new Date().getFullYear()} Logan Voravong · Philadelphia, PA</p>
       </div>
     </footer>
   );

@@ -1,7 +1,4 @@
 import React from "react";
-import '@fortawesome/free-regular-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBriefcase } from '@fortawesome/free-solid-svg-icons';
 import '../assets/styles/Timeline.scss'
 
 interface Experience {
@@ -10,7 +7,6 @@ interface Experience {
     description: string;
     location: string;
     date: string;
-    color: 'indigo' | 'cyan';
 }
 
 const experiences: Experience[] = [
@@ -20,7 +16,6 @@ const experiences: Experience[] = [
         description: "Trading Post-Execution · Infrastructure",
         location: "Philadelphia, PA",
         date: "March 2026 — Present",
-        color: "cyan"
     },
     {
         company: "Comcast",
@@ -28,7 +23,6 @@ const experiences: Experience[] = [
         description: "Network Orchestration and Monitoring Deployment (NOMAD) · Infrastructure",
         location: "Philadelphia, PA",
         date: "March 2025 — March 2026",
-        color: "indigo"
     },
     {
         company: "Zhou Robotics Lab",
@@ -36,40 +30,32 @@ const experiences: Experience[] = [
         description: "Small Language Model Fine-Tuning · Multi-Agent Flocking Systems",
         location: "Philadelphia, PA",
         date: "May 2024 — April 2025",
-        color: "cyan"
     }
 ];
 
 function Timeline() {
   return (
-    <div className="timeline-section" id="history">
-      <div className="timeline-header">
-        <div className="section-label">Career</div>
-        <h1 className="section-title">Experience</h1>
-        <p className="section-subtitle">Where I've built, shipped, and learned</p>
-      </div>
-      <div className="timeline-track">
-        <div className="timeline-line"></div>
-        {experiences.map((exp, index) => (
-            <div key={index} className={`timeline-card glass-card`}>
-                <div className="timeline-dot-wrapper">
-                    <div className={`timeline-dot ${exp.color}`}>
-                        <FontAwesomeIcon icon={faBriefcase} />
-                    </div>
+    <section className="timeline-section terminal-section" id="experience" aria-labelledby="experience-heading">
+      <header className="terminal-section-heading">
+        <p><span>logan@portfolio</span>:~$ git log --experience</p>
+        <h2 id="experience-heading">Experience</h2>
+      </header>
+      <div className="experience-list">
+        {experiences.map((exp) => (
+            <article key={`${exp.company}-${exp.date}`} className="experience-row">
+                <p className="experience-date"><span>*</span> {exp.date}</p>
+                <div className="experience-role">
+                    <h3>{exp.company}</h3>
+                    <p>{exp.role}</p>
                 </div>
-                <div className="timeline-card-header">
-                    <div className="timeline-card-meta">
-                        <span className={`timeline-date ${exp.color}`}>{exp.date}</span>
-                        <span className="timeline-location">{exp.location}</span>
-                    </div>
-                    <h2>{exp.company}</h2>
-                    <h3>{exp.role}</h3>
-                    <p className="timeline-description">{exp.description}</p>
+                <div className="experience-detail">
+                    <p>{exp.description}</p>
+                    <p>{exp.location}</p>
                 </div>
-            </div>
+            </article>
         ))}
       </div>
-    </div>
+    </section>
   );
 }
 
