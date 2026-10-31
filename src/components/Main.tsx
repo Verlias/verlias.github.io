@@ -12,7 +12,8 @@ function Main() {
       <div className="hero-copy terminal-body">
         <p className="terminal-command"><span>logan@portfolio</span>:~$ whoami</p>
         <h1 id="hero-heading">Logan Voravong</h1>
-        <p className="hero-role">SWE Intern @ SIG · Prev @ Comcast · CS @ Drexel</p>
+        <p className="hero-role">SWE Intern @ SIG · CS @ Drexel</p>
+        <p className="hero-previous">Prev @ Comcast</p>
         <div className="hero-links" aria-label="Profile links">
           <a href="#experience">experience/</a>
           <a href="#projects">projects/</a>
