@@ -1,183 +1,42 @@
-/* ========================================
-   TIMELINE SECTION — Dark Theme
-   ======================================== */
-
-.timeline-section {
-  position: relative;
-  padding: var(--section-padding);
-  overflow: hidden;
+.experience-list {
+  border-top: 1px solid var(--terminal-rule);
 }
 
-.timeline-section::before {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 500px;
-  height: 500px;
-  background: radial-gradient(circle, rgba(34, 211, 238, 0.05) 0%, transparent 70%);
-  pointer-events: none;
+.experience-row {
+  display: grid;
+  grid-template-columns: 2.5fr 4fr 5fr;
+  gap: clamp(1rem, 3vw, 3rem);
+  padding: clamp(1.6rem, 3vw, 2.5rem) 0;
+  border-bottom: 1px solid var(--terminal-rule);
 }
 
-.timeline-header {
-  text-align: center;
-  margin-bottom: 64px;
-  position: relative;
-  z-index: 1;
-}
-
-/* Track layout */
-.timeline-track {
-  position: relative;
-  max-width: 800px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  z-index: 1;
-}
-
-/* Vertical line */
-.timeline-line {
-  position: absolute;
-  left: 27px;
-  top: 0;
-  bottom: 0;
-  width: 1px;
-  background: linear-gradient(
-    to bottom,
-    transparent,
-    var(--border-color) 10%,
-    var(--border-color) 90%,
-    transparent
-  );
-}
-
-/* Card */
-.timeline-card {
-  padding: 28px 28px 28px 72px;
-  position: relative;
-}
-
-/* Dot on the line */
-.timeline-dot-wrapper {
-  position: absolute;
-  left: 12px;
-  top: 32px;
-}
-
-.timeline-dot {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  background: var(--bg-secondary);
-  border: 2px solid rgba(129, 140, 248, 0.3);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--accent-primary);
-  font-size: 0.75rem;
-  transition: all var(--transition-base);
-}
-
-.timeline-card:hover .timeline-dot {
-  border-color: var(--accent-primary);
-  box-shadow: 0 0 16px rgba(129, 140, 248, 0.2);
-}
-
-.timeline-dot.cyan {
-  border-color: rgba(34, 211, 238, 0.3);
-  color: var(--accent-secondary);
-}
-
-.timeline-card:hover .timeline-dot.cyan {
-  border-color: var(--accent-secondary);
-  box-shadow: 0 0 16px rgba(34, 211, 238, 0.2);
-}
-
-/* Card header + meta */
-.timeline-card-header {
-  margin-bottom: 0;
-}
-
-.timeline-card-meta {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 10px;
-  flex-wrap: wrap;
-}
-
-.timeline-date {
+.experience-date {
+  color: var(--terminal-muted);
   font-family: var(--font-mono);
   font-size: 0.78rem;
-  font-weight: 500;
-  color: var(--accent-primary);
-  letter-spacing: 0.02em;
 }
 
-.timeline-date.cyan {
-  color: var(--accent-secondary);
+.experience-date span { color: var(--terminal-green); }
+
+.experience-role h3 {
+  margin-bottom: 0.45rem;
+  color: var(--terminal-text);
+  font-size: clamp(1.15rem, 2vw, 1.55rem);
 }
 
-.timeline-location {
-  font-size: 0.8rem;
-  color: var(--text-tertiary);
+.experience-role p { color: var(--terminal-amber); }
+.experience-detail p { color: var(--terminal-muted); }
+
+.experience-detail p + p {
+  margin-top: 0.65rem;
+  color: var(--terminal-blue);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
 }
 
-.timeline-card-header h2 {
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: var(--text-primary);
-}
-
-.timeline-card-header h3 {
-  font-size: 0.95rem;
-  font-weight: 500;
-  color: var(--text-secondary);
-  margin-top: 2px;
-}
-
-.timeline-description {
-  font-size: 0.85rem;
-  color: var(--text-tertiary);
-  margin-top: 8px;
-  letter-spacing: 0.02em;
-}
-
-/* Responsive */
-@media screen and (max-width: 768px) {
-  .timeline-section {
-    padding: var(--section-padding-mobile);
-  }
-
-  .timeline-header {
-    margin-bottom: 40px;
-  }
-
-  .timeline-card {
-    padding: 24px 20px 24px 60px;
-  }
-
-  .timeline-dot-wrapper {
-    left: 8px;
-  }
-
-  .timeline-line {
-    left: 23px;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .timeline-card {
-    padding: 20px 16px 20px 52px;
-  }
-
-  .timeline-line {
-    left: 19px;
-  }
-
-  .timeline-dot-wrapper {
-    left: 4px;
+@media (max-width: 760px) {
+  .experience-row {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
   }
 }

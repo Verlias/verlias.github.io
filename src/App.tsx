@@ -1,30 +1,24 @@
-import React, { useEffect } from "react";
+import React from "react";
 import {
   Main,
   Timeline,
-  Expertise,
+  About,
   Project,
   Navigation,
   Footer,
 } from "./components";
-import FadeIn from './components/FadeIn';
 import './index.scss';
 
 function App() {
-    useEffect(() => {
-        window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
-    }, []);
-
     return (
     <div className="main-container">
-        <div className="noise-overlay"></div>
         <Navigation />
-        <FadeIn transitionDuration={700}>
+        <main>
             <Main/>
-            <Expertise/>
+            <About/>
             <Timeline/>
             <Project/>
-        </FadeIn>
+        </main>
         <Footer />
     </div>
     );

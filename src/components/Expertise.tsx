@@ -1,113 +1,60 @@
 import React from "react";
-import '@fortawesome/free-regular-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faServer, faBrain, faCode } from '@fortawesome/free-solid-svg-icons';
 import '../assets/styles/Expertise.scss';
+import pfp from '../assets/images/PFP.png';
 
-const labelsInfra = [
-    "Kubernetes",
-    "Docker",
-    "AWS",
-    "Linux",
-    "Jenkins",
-    "GitHub Actions",
-    "CI/CD",
-    "Grafana",
-    "Prometheus",
-    "Terraform",
-    "Concourse",
+const capabilities = [
+    {
+        title: "Infrastructure and observability",
+        description: "Production systems, delivery pipelines, container platforms, and the telemetry needed to understand them.",
+        tools: "Kubernetes, Docker, AWS, Linux, Terraform, Grafana, Prometheus"
+    },
+    {
+        title: "Inference and machine learning systems",
+        description: "Model-serving infrastructure and applied machine learning, with attention to throughput, reliability, and operator feedback.",
+        tools: "vLLM, PyTorch, TensorFlow, scikit-learn, Python"
+    },
+    {
+        title: "Backend engineering",
+        description: "Services and APIs that connect infrastructure to useful products, from systems code to relational data.",
+        tools: "Go, Python, C++, Java, .NET, PostgreSQL, MongoDB"
+    },
 ];
 
-const labelsML = [
-    "PyTorch",
-    "TensorFlow",
-    "Scikit-Learn",
-    "Python",
-    "Pandas",
-    "NumPy",
-];
-
-const labelsFullStack = [
-    "Python",
-    "Go",
-    "C#",
-    ".NET Framework",
-    "React.js",
-    "Node.js",
-    "Java",
-    "C/C++",
-    "Spring Boot",
-    "Flask",
-    "PostgreSQL",
-    "MongoDB",
-    "REST APIs",
-];
-
-function Expertise() {
+function About() {
     return (
-    <div className="expertise-section" id="expertise">
-        <div className="expertise-header">
-            <div className="section-label">Skills</div>
-            <h1 className="section-title">Expertise</h1>
-            <p className="section-subtitle">Core competencies across infrastructure, ML, and software engineering</p>
-        </div>
-        <div className="expertise-grid">
-            {/* 1. Infrastructure & Observability */}
-            <div className="expertise-card glass-card">
-                <span className="card-number">01</span>
-                <div className="expertise-icon-wrapper">
-                    <FontAwesomeIcon icon={faServer} />
-                </div>
-                <h3>Infrastructure & Observability</h3>
-                <p>Building and monitoring production infrastructure with deep expertise in CI/CD pipelines, container orchestration, and observability platforms for real-time data monitoring and alerting.</p>
-                <div className="expertise-tags">
-                    <span className="tag-label">Tech stack</span>
-                    <div className="tags-wrap">
-                        {labelsInfra.map((label, index) => (
-                            <span key={index} className="skill-tag">{label}</span>
-                        ))}
-                    </div>
-                </div>
-            </div>
-
-            {/* 2. Machine Learning */}
-            <div className="expertise-card glass-card">
-                <span className="card-number">02</span>
-                <div className="expertise-icon-wrapper cyan">
-                    <FontAwesomeIcon icon={faBrain} />
-                </div>
-                <h3>Machine Learning</h3>
-                <p>Passionate about applying ML to real-world problems — from neural network architectures for multi-robot systems to training models for financial prediction and sentiment analysis.</p>
-                <div className="expertise-tags">
-                    <span className="tag-label">Tech stack</span>
-                    <div className="tags-wrap">
-                        {labelsML.map((label, index) => (
-                            <span key={index} className="skill-tag cyan">{label}</span>
-                        ))}
-                    </div>
-                </div>
-            </div>
-
-            {/* 3. Backend */}
-            <div className="expertise-card glass-card">
-                <span className="card-number">03</span>
-                <div className="expertise-icon-wrapper violet">
-                    <FontAwesomeIcon icon={faCode} />
-                </div>
-                <h3>Backend</h3>
-                <p>Building end-to-end applications with modern frameworks and languages — from React frontends and Go microservices to Python backends and relational databases.</p>
-                <div className="expertise-tags">
-                    <span className="tag-label">Tech stack</span>
-                    <div className="tags-wrap">
-                        {labelsFullStack.map((label, index) => (
-                            <span key={index} className="skill-tag violet">{label}</span>
-                        ))}
-                    </div>
-                </div>
+    <section className="about-section terminal-section" id="about" aria-labelledby="about-heading">
+        <header className="terminal-section-heading">
+            <p><span>logan@portfolio</span>:~$ cat about.md</p>
+            <h2 id="about-heading">About</h2>
+        </header>
+        <div className="about-layout">
+            <figure className="about-portrait">
+                <img src={pfp} alt="Logan Voravong wearing a suit and tie" />
+                <figcaption>logan.jpg · Philadelphia, PA</figcaption>
+            </figure>
+            <div className="about-copy">
+                <p>
+                    I’m a fourth-year Computer Science student at Drexel University with 1.5+
+                    years of software engineering experience and a strong background in distributed
+                    systems, observability, and AI infrastructure.
+                </p>
             </div>
         </div>
-    </div>
+        <div className="capabilities-heading">
+            <p><span>logan@portfolio</span>:~$ inspect --capabilities</p>
+            <h3>Capabilities</h3>
+        </div>
+        <div className="capabilities-list">
+            {capabilities.map((capability) => (
+                <article className="capability-row" key={capability.title}>
+                    <h4>{capability.title}</h4>
+                    <p>{capability.description}</p>
+                    <p className="capability-tools">{capability.tools}</p>
+                </article>
+            ))}
+        </div>
+    </section>
     );
 }
 
-export default Expertise;
+export default About;

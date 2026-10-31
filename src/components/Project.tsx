@@ -1,116 +1,80 @@
 import React from "react";
-import DrexelMaps from '../assets/images/DrexelMaps.png';
-import Prospera from '../assets/images/Prospera.png';
-import GEMM from '../assets/images/GEMM.jpg';
-import Homelab from '../assets/images/Homelab.jpg';
-import GraphSpec from '../assets/images/GraphSpec.jpg';
 import '../assets/styles/Project.scss';
 
 interface ProjectData {
     title: string;
     description: string;
-    image: string;
-    link: string;
+    link?: string;
     tags: string[];
-    highlight?: string;
 }
 
 const projects: ProjectData[] = [
     {
+        title: "Distributed GPU Inference Orchestrator",
+        description: "Go control plane that routes inference requests to live vLLM workers using Redis-backed discovery, short-lived leases, and workload telemetry.",
+        link: "https://github.com/Verlias/distributed-gpu-inference-orchestrator",
+        tags: ["Go", "Redis", "vLLM", "Docker", "GPU Infrastructure"],
+    },
+    {
         title: "High-Performance GEMM",
         description: "Implemented contiguous-memory C++ matrix multiplication engine with cache-blocking and loop reordering to optimize CPU performance.",
-        image: GEMM,
         link: "https://github.com/Verlias/matmul",
         tags: ["C++", "HPC", "Performance Optimization"],
-        highlight: "Featured Project"
     },
     {
         title: "Homelab",
         description: "Designed multi-node Kubernetes cluster with automated Linux node provisioning using Ansible and Helm. Implemented automated workload recovery workflows.",
-        image: Homelab,
-        link: "#",
         tags: ["Kubernetes", "Ansible", "Helm", "Infrastructure"]
-    },
-    {
-        title: "GraphSpec",
-        description: "Engineered telemetry pipeline for AI agent workflows with DAG-based visualization and replay system to flag hallucinations and execution bottlenecks.",
-        image: GraphSpec,
-        link: "#",
-        tags: ["Telemetry", "DAG", "Observability"]
     },
     {
         title: "Prospera",
         description: "AI-powered budgeting app that analyzes spending patterns and provides personalized recommendations, integrating real-time financial data with a secure chatbot for quick financial insights.",
-        image: Prospera,
         link: "https://github.com/Verlias/PennApps2025-Prospera",
         tags: ["React", "Python", "OpenAI", "Finance"],
-        highlight: "Top 10 Best Design — PennApps"
-    },
-    {
-        title: "Drexel Maps",
-        description: "MERN stack web app helping students locate classes with A* pathfinding, detailed floor plans, and efficient routing across campus buildings.",
-        image: DrexelMaps,
-        link: "https://github.com/Verlias/DrexelMaps",
-        tags: ["React", "Node.js", "MongoDB", "A* Algorithm"]
     },
 ];
 
-function ProjectCard({ project }: { project: ProjectData }) {
-    return (
-        <a 
-            href={project.link} 
-            target="_blank" 
-            rel="noreferrer" 
-            className="project-card glass-card"
-        >
-            <div className="project-image">
-                <img src={project.image} alt={project.title} />
-                <div className="project-image-overlay"></div>
-            </div>
-            <div className="project-content">
-                {project.highlight && (
-                    <span className="project-highlight">{project.highlight}</span>
-                )}
+function ProjectRow({ project }: { project: ProjectData }) {
+    const content = (
+        <>
+            <div className="project-row-name">
                 <h3>{project.title}</h3>
-                <p>{project.description}</p>
-                <div className="project-tags">
-                    {project.tags.map((tag, tagIndex) => (
-                        <span key={tagIndex} className="skill-tag">{tag}</span>
-                    ))}
-                </div>
             </div>
-            <div className="project-link-indicator">
-                <svg width="18" height="18" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-            </div>
-        </a>
+            <p className="project-row-description">{project.description}</p>
+            <p className="project-row-stack">{project.tags.join(", ")}</p>
+            <span className="project-row-action">{project.link ? 'open' : 'local'}</span>
+        </>
+    );
+
+    if (project.link) {
+        return (
+            <a className="project-row" href={project.link} target="_blank" rel="noreferrer">
+                {content}
+            </a>
+        );
+    }
+
+    return (
+        <article className="project-row">{content}</article>
     );
 }
 
 function Project() {
-    const [featured, ...rest] = projects;
-    
     return(
-    <div className="projects-section" id="projects">
-        <div className="projects-header">
-            <div className="section-label">Work</div>
-            <h1 className="section-title">Featured Projects</h1>
-            <p className="section-subtitle">Things I've built and contributed to</p>
+    <section className="projects-section terminal-section" id="projects" aria-labelledby="projects-heading">
+        <header className="terminal-section-heading">
+            <p><span>logan@portfolio</span>:~/projects$ ls -la</p>
+            <h2 id="projects-heading">Projects</h2>
+        </header>
+        <div className="project-columns" aria-hidden="true">
+            <span>name</span><span>description</span><span>stack</span><span>status</span>
         </div>
-        
-        {/* Spotlight: Featured project */}
-        <div className="project-spotlight">
-            <ProjectCard project={featured} />
-        </div>
-
-        {/* Remaining projects grid */}
-        <div className="projects-grid">
-            {rest.map((project, index) => (
-                <ProjectCard key={index} project={project} />
+        <div className="project-list">
+            {projects.map((project) => (
+                <ProjectRow key={project.title} project={project} />
             ))}
         </div>
-    </div>
+    </section>
     );
 }
 
