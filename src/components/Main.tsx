@@ -12,10 +12,7 @@ function Main() {
       <div className="hero-copy terminal-body">
         <p className="terminal-command"><span>logan@portfolio</span>:~$ whoami</p>
         <h1 id="hero-heading">Logan Voravong</h1>
-        <p className="hero-role">Software Engineer.</p>
-        <p className="hero-current">
-          <span>current:</span> post-trade infrastructure at Susquehanna International Group
-        </p>
+        <p className="hero-role">SWE Intern @ SIG · CS @ Drexel</p>
         <div className="hero-links" aria-label="Profile links">
           <a href="#experience">experience/</a>
           <a href="#projects">projects/</a>

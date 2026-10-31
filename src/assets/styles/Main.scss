@@ -57,22 +57,6 @@
   font-size: clamp(1.2rem, 2.3vw, 2rem);
 }
 
-.hero-intro {
-  max-width: 47rem;
-  margin-top: clamp(2rem, 5vw, 3.5rem);
-  color: var(--terminal-text);
-  font-size: clamp(1.1rem, 1.8vw, 1.4rem);
-}
-
-.hero-current {
-  margin-top: 1.25rem;
-  color: var(--terminal-muted);
-  font-family: var(--font-mono);
-  font-size: 0.86rem;
-}
-
-.hero-current span { color: var(--terminal-green); }
-
 .hero-links {
   display: flex;
   flex-wrap: wrap;
